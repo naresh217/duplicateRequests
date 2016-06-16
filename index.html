@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Supress Duplicate Requests</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"> </script>
+<script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js"></script>
+<script src="app.js"></script>
+
+  </head>
+  <body ng-controller="MainCtrl">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-5">
+            <a href="#" class="">Link text</a>
+            <button class="btn btn-primary" ng-click="sendRequests()">Send Request</button>
+            <div>
+              <strong>Ajax response</strong>
+              <p>
+                {{response | json}}
+              </p>
+            </div>
+            <div class="alert alert-info" role="alert"> <strong>Heads up!</strong> Try to send multiple requests by getting foucs using tab and hit and Hold enter key</div>
+          </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
